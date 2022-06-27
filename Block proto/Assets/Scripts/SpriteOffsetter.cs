@@ -22,9 +22,8 @@ public class SpriteOffsetter : MonoBehaviour
     Vector3 RoundPixel(Vector3 input)
     {
         input *= 32;
-        input.x = Mathf.Round(input.x);
+        input.x = (Mathf.Round(input.x) + (1/64));
         input.y = Mathf.Round(input.y);
-        input.z = Mathf.Round(input.z);
         input /= 32;
         return input;
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerEnt : MonoBehaviour
 {
+	private Vector3 oldDir = Vector3.down;
 	private Vector3 oldPos, newPos;
 	public float moveTime = 0.2f;
 	private bool isMoving = false;
@@ -46,7 +47,7 @@ public class PlayerEnt : MonoBehaviour
 			yield return null;
 		}
 		transform.position = newPos;
-
+		oldDir = dir;
 		isMoving = false;
 	}
 } 

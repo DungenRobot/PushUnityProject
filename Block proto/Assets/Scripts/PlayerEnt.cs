@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerEnt : MonoBehaviour
+public class 
+PlayerEnt : MonoBehaviour
 {
 	private Vector3 oldDir = Vector3.down;
 	private Vector3 oldPos, newPos;
+	
 	public float moveTime = 0.1f;
 	public float pushTime = 0.1f;
+	
 	private bool isMoving = false;
-
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void 
@@ -40,22 +39,23 @@ public class PlayerEnt : MonoBehaviour
 
 		GameObject attached = null;
 
-		//Perform a raycast from the origin of the player to the tile in the direction the player is facing
+		/* Perform a raycast from the origin of the player to the tile in the direction the player is facing */
 		RaycastHit2D check = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), transform.TransformDirection(dir), 1f); 
 
-		//Draw a line with the same properties as the raycast
-		//Remove for final build
+		/* raw a line with the same properties as the raycast */
+		/* TODO - remove for final build */
 		Debug.DrawRay(transform.position + new Vector3(0.0f, 0.5f, 0.0f), transform.TransformDirection(dir), Color.green);
 
-		//if a colision occured, check if the collider was a box or a wall
+		/* if a colision occured, check if the collider was a box or a wall */
 		if (check) {
 			Collider2D c = check.collider;
-			if (c.gameObject.tag == "Block")
+			if (c.gameObject.tag == "Block") {
 				pushing = true;
 				attached = c.gameObject;
 				aOldPos = attached.transform.position;
 				aNewPos = aOldPos + dir;
-			if (c.gameObject.tag == "Obstacle")
+			}
+			if (c.gameObject.tag == "Obstacle") 
 				canmove = false;
 		}
 		
@@ -65,19 +65,22 @@ public class PlayerEnt : MonoBehaviour
 
 		oldPos = transform.position;
 		newPos = oldPos + dir;
-		if (!canmove) newPos = oldPos;
+		
+		if (!canmove) 
+		newPos = oldPos;
 
 		while (elapsedTime < pushTime) {
 			if (pushing)
 				attached.transform.position = Vector3.Lerp(aOldPos, aNewPos, (elapsedTime / pushTime));
+			
 			transform.position = Vector3.Lerp(oldPos, newPos, (elapsedTime / moveTime));
-			//transform.position = newPos;
 			elapsedTime += Time.deltaTime;
 			yield return null;
 		}
 		
 		if (pushing)
 			attached.transform.position = aNewPos;
+		
 		transform.position = newPos;
 		oldDir = dir;
 		isMoving = false;

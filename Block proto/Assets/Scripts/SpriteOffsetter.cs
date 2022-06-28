@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpriteOffsetter : MonoBehaviour
 {
-    public Vector3 offset = new Vector3(0.015625f, 0, 0);
+    public Vector3 offset = new Vector3(0.03125f, 0, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +22,10 @@ public class SpriteOffsetter : MonoBehaviour
 
     Vector3 RoundPixel(Vector3 input)
     {
-        input *= 32;
+        input *= 16;
         input.x = Mathf.Round(input.x);
         input.y = Mathf.Round(input.y);
-        input /= 32;
+        input /= 16;
         return input;
     }
 }

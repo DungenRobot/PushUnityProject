@@ -41,6 +41,8 @@ public class PlayerEnt : MonoBehaviour
 		GameObject attached = null;
 		RaycastHit2D check = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), transform.TransformDirection(dir), 1f); 
 		Debug.DrawRay(transform.position + new Vector3(0.0f, 0.5f, 0.0f), transform.TransformDirection(dir), Color.green);
+
+		//if a colision occured, check if the collider was a box or a wall
 		if (check) {
 			Collider2D c = check.collider;
 			if (c.gameObject.tag == "Block")

@@ -40,7 +40,7 @@ PlayerEnt : MonoBehaviour
 		GameObject attached = null;
 
 		/* Perform a raycast from the origin of the player to the tile in the direction the player is facing */
-		RaycastHit2D check = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), transform.TransformDirection(dir), 1f); 
+		RaycastHit2D check = Physics2D.Raycast(transform.position, transform.TransformDirection(dir), 1f); 
 
 		/* raw a line with the same properties as the raycast */
 		/* TODO - remove for final build */

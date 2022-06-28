@@ -5,11 +5,12 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
 	public bool active = false;
+	private LevelExit exit;
 	// Start is called before the first frame update
     void Start()
     {
-        
-    }
+		exit = GameObject.Find("Level Exit").GetComponent<LevelExit>();
+    }	
 
     // Update is called once per frame
     void Update()
@@ -28,7 +29,7 @@ public class Button : MonoBehaviour
 					a+=1;
 			}
 			if (a == buttons.Length) 
-				Debug.Log("you win!");
+				exit.Open();
 		}
 	}
 

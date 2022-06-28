@@ -5,17 +5,23 @@ using UnityEngine;
 public class 
 PlayerEnt : MonoBehaviour
 {
+	private LevelExit exit;
+
 	private Vector3 oldDir = Vector3.down;
 	private Vector3 oldPos, newPos;
-	
+
 	public float moveTime = 0.1f;
 	public float pushTime = 0.1f;
 	
 	private bool isMoving = false;
 
+    void Start()
+    {
+		exit = GameObject.Find("Level Exit").GetComponent<LevelExit>();
+    }	
+
     // Update is called once per frame
-    void 
-	Update()
+    void Update()
     {
 		if (Input.GetKey(KeyCode.A) && !isMoving)
 			StartCoroutine(Move(Vector3.left));

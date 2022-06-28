@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Sprite Test Scene.unity
+    guid: 0d030d25680fb42729ba76ef51eb256e
   m_configObjects: {}

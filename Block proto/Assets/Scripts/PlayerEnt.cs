@@ -6,8 +6,8 @@ public class PlayerEnt : MonoBehaviour
 {
 	private Vector3 oldDir = Vector3.down;
 	private Vector3 oldPos, newPos;
-	public float moveTime = 0.15f;
-	public float pushTime = 0.2f;
+	public float moveTime = 0.1f;
+	public float pushTime = 0.1f;
 	private bool isMoving = false;
 
     void Start()

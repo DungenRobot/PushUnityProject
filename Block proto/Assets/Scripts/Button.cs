@@ -19,8 +19,17 @@ public class Button : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Block")
+		if (col.gameObject.tag == "Block") {
 			active = true;
+			Button[] buttons = FindObjectsOfType<Button>();
+			int a = 0;
+			for (int i = 0; i < buttons.Length; i++) {
+				if (buttons[i].active)
+					a+=1;
+			}
+			if (a == buttons.Length) 
+				Debug.Log("you win!");
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D col)

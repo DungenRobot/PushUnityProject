@@ -39,7 +39,12 @@ public class PlayerEnt : MonoBehaviour
 		Vector3 aOldPos = Vector3.zero, aNewPos = Vector3.zero;
 
 		GameObject attached = null;
+
+		//Perform a raycast from the origin of the player to the tile in the direction the player is facing
 		RaycastHit2D check = Physics2D.Raycast(transform.position + (Vector3.up * 0.5f), transform.TransformDirection(dir), 1f); 
+
+		//Draw a line with the same properties as the raycast
+		//Remove for final build
 		Debug.DrawRay(transform.position + new Vector3(0.0f, 0.5f, 0.0f), transform.TransformDirection(dir), Color.green);
 
 		//if a colision occured, check if the collider was a box or a wall
@@ -70,6 +75,7 @@ public class PlayerEnt : MonoBehaviour
 			elapsedTime += Time.deltaTime;
 			yield return null;
 		}
+		
 		if (pushing)
 			attached.transform.position = aNewPos;
 		transform.position = newPos;

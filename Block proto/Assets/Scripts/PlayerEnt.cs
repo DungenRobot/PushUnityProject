@@ -43,7 +43,6 @@ public class PlayerEnt : MonoBehaviour
 		Debug.DrawRay(transform.position + new Vector3(0.0f, 0.5f, 0.0f), transform.TransformDirection(dir), Color.green);
 		if (check) {
 			Collider2D c = check.collider;
-			Debug.Log(c);
 			if (c.gameObject.tag == "Block")
 				pushing = true;
 				attached = c.gameObject;

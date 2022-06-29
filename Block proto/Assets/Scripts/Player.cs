@@ -29,7 +29,6 @@ Player : MonoBehaviour
     void Start()
     {
         newPos = transform.position;
-        Debug.Log(newPos);
 		_audioSource = GetComponent<AudioSource>();
 		exit = GameObject.Find("Level Exit").GetComponent<LevelExit>();
     }	
@@ -72,7 +71,7 @@ Player : MonoBehaviour
         _audioSource.Stop();
         lerpTime = 0f;
 
-        if (pushing)
+        if (block != null)
         {
             block.transform.position = blockNewPos;
             block = null;
@@ -88,14 +87,13 @@ Player : MonoBehaviour
         pushing = false;
 
         //Raycast from where the player is to where the player is trying to move
-        RaycastHit2D playerCast = Physics2D.Raycast(transform.position, moveDirection, 1f);
-
+        RaycastHit2D playerCast = Physics2D.Raycast(transform.position - (moveDirection/3), moveDirection, 1.4f);
         if (playerCast.collider != null) 
         {
             Collider2D collision = playerCast.collider;
             if (collision.gameObject.tag == "Block")
             {
-                RaycastHit2D blockCast = Physics2D.Raycast(transform.position + moveDirection, moveDirection, 1f);
+                RaycastHit2D blockCast = Physics2D.Raycast(transform.position + moveDirection, moveDirection, 1.4f);
                 if (blockCast.collider == null || blockCast.collider.gameObject.tag == "Button")
                 {
                     

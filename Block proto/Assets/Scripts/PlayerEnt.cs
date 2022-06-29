@@ -50,16 +50,25 @@ PlayerEnt : MonoBehaviour
 
 		/* raw a line with the same properties as the raycast */
 		/* TODO - remove for final build */
-		Debug.DrawRay(transform.position + new Vector3(0.0f, 0.5f, 0.0f), transform.TransformDirection(dir), Color.green);
+		Debug.DrawRay(transform.position + new Vector3(0.0f, 0.5f, 2.0f), transform.TransformDirection(dir), Color.green);
 
 		/* if a colision occured, check if the collider was a box or a wall */
+
+		/* of note: this if statement will always return true as RayCast2D will always return an object containing a collider
+		even if this collider is of a Null value*/
 		if (check) {
 			Collider2D c = check.collider;
 			if (c.gameObject.tag == "Block") {
-				pushing = true;
-				attached = c.gameObject;
-				aOldPos = attached.transform.position;
-				aNewPos = aOldPos + dir;
+				//Run another raycast from inside the box to verify that the box can be pushed
+				RaycastHit2D boxCheck = Physics2D.Raycast(transform.position + dir, transform.TransformDirection(dir) + dir, 1f); 
+				if (boxCheck.collider == null || boxCheck.collider.gameObject.tag == "Button") {
+					pushing = true;
+					attached = c.gameObject;
+					aOldPos = attached.transform.position;
+					aNewPos = aOldPos + dir;
+				}else{
+					canmove = false;
+				}
 			}
 			if (c.gameObject.tag == "Obstacle") 
 				canmove = false;

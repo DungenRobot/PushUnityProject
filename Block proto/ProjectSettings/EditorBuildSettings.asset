@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sprite Test Scene.unity
     guid: 0d030d25680fb42729ba76ef51eb256e
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 3a9ea18db5f3eec48aec3d2e3e05d77d
   m_configObjects: {}

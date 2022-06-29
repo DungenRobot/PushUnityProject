@@ -741,10 +741,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138a612f4a3fe4ad4b2f6e5031d172bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stone_move: {fileID: 0}
+  stone_move: {fileID: 8300000, guid: 9040aa97bdbe3eb4481a51f49253ae3a, type: 3}
   lerpTime: 0
   timeToMove: 0.2
-  pushTime: 100
+  pushTime: 0.6
 --- !u!1001 &1381950512
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3183726906943199039}
   - component: {fileID: 3183726906943199036}
-  - component: {fileID: 3183726906943199037}
   - component: {fileID: 3183726906943199038}
   - component: {fileID: 691334973}
   - component: {fileID: 669488237}
+  - component: {fileID: 2826690331515895740}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -87,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3183726906943199037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3183726906943199034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2df838bee8a585d4fb4c60492ef27b61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stone_move: {fileID: 8300000, guid: 9040aa97bdbe3eb4481a51f49253ae3a, type: 3}
-  moveTime: 0.2
-  pushTime: 0.6
 --- !u!61 &3183726906943199038
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -245,3 +230,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2826690331515895740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183726906943199034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138a612f4a3fe4ad4b2f6e5031d172bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stone_move: {fileID: 8300000, guid: 9040aa97bdbe3eb4481a51f49253ae3a, type: 3}
+  lerpTime: 0
+  timeToMove: 0.2
+  pushTime: 0.6

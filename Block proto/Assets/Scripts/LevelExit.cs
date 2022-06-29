@@ -8,7 +8,8 @@ public class LevelExit : MonoBehaviour
 	private AudioSource audioSource;
 	[SerializeField]
 	private AudioClip failSound;
-    public bool isOpen = false;
+
+  	public bool isOpen = false;
     public string nextLevelName;
     private SpriteRenderer sprite;
     

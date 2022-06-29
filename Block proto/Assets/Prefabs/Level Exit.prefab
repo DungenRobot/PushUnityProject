@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -4486082940999508131, guid: 70012ba29ed084f82b81e3d2188ab719,
     type: 3}
-  m_Color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,8 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   failSound: {fileID: 8300000, guid: 20444d3ee97cad34a905da464fea54db, type: 3}
+  teleportSound: {fileID: 8300000, guid: 8f991f4604b51c245ba0ceb3fb17c0c0, type: 3}
   isOpen: 0
-  nextLevelName: Main
+  nextLevelName: Level 2
   errorFlashTime: 0.5
 --- !u!61 &8257677762844631134
 BoxCollider2D:

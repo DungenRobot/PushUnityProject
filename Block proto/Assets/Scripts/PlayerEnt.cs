@@ -50,7 +50,7 @@ PlayerEnt : MonoBehaviour
 
 		/* raw a line with the same properties as the raycast */
 		/* TODO - remove for final build */
-		Debug.DrawRay(transform.position + new Vector3(0.0f, 0.5f, 2.0f), transform.TransformDirection(dir), Color.green);
+		//Debug.DrawRay(transform.position, transform.TransformDirection(dir), Color.green);
 
 		/* if a colision occured, check if the collider was a box or a wall */
 

@@ -135,6 +135,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 2907464069879337848, guid: cb24e4d0219ee4bba97ae76726a730d1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907464069879337849, guid: cb24e4d0219ee4bba97ae76726a730d1,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907464069879337849, guid: cb24e4d0219ee4bba97ae76726a730d1,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2907464069879337852, guid: cb24e4d0219ee4bba97ae76726a730d1,
         type: 3}
       propertyPath: m_RootOrder

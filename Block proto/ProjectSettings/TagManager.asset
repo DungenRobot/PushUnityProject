@@ -7,6 +7,7 @@ TagManager:
   - Block
   - Obstacle
   - Exit
+  - Button
   layers:
   - Default
   - TransparentFX

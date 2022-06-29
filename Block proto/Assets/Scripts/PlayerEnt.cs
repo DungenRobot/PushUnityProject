@@ -5,18 +5,24 @@ using UnityEngine;
 public class 
 PlayerEnt : MonoBehaviour
 {
+	private AudioSource _audioSource;
+
+	[SerializeField]
+	private AudioClip stone_move;
+
 	private LevelExit exit;
 
 	private Vector3 oldDir = Vector3.down;
 	private Vector3 oldPos, newPos;
 
-	public float moveTime = 0.1f;
-	public float pushTime = 0.1f;
+	public float moveTime = 0.01f;
+	public float pushTime = 100f;
 	
 	private bool isMoving = false;
 
     void Start()
     {
+		_audioSource = GetComponent<AudioSource>();
 		exit = GameObject.Find("Level Exit").GetComponent<LevelExit>();
     }	
 
@@ -63,6 +69,8 @@ PlayerEnt : MonoBehaviour
 				RaycastHit2D boxCheck = Physics2D.Raycast(transform.position + dir, transform.TransformDirection(dir) + dir, 1f); 
 				if (boxCheck.collider == null || boxCheck.collider.gameObject.tag == "Button") {
 					pushing = true;
+					_audioSource.clip = stone_move;
+					_audioSource.Play();
 					attached = c.gameObject;
 					aOldPos = attached.transform.position;
 					aNewPos = aOldPos + dir;
@@ -83,12 +91,12 @@ PlayerEnt : MonoBehaviour
 		
 		if (!canmove) 
 		newPos = oldPos;
-
-		while (elapsedTime < pushTime) {
+		
+		while (elapsedTime < (pushing ? pushTime : moveTime)) {
 			if (pushing)
 				attached.transform.position = Vector3.Lerp(aOldPos, aNewPos, (elapsedTime / pushTime));
 			
-			transform.position = Vector3.Lerp(oldPos, newPos, (elapsedTime / moveTime));
+			transform.position = Vector3.Lerp(oldPos, newPos, (elapsedTime / (pushing ? pushTime : moveTime)));
 			elapsedTime += Time.deltaTime;
 			yield return null;
 		}

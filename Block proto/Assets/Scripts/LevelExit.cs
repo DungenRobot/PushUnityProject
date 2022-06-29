@@ -17,13 +17,22 @@ public class LevelExit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void Open()
     {
         isOpen = true;
         sprite.color = Color.white;
+    }
+
+    public void Close()
+    {
+        isOpen = false;
+        sprite.color = new Color(0.491f, 0.491f, 0.491f, 1.000f);
     }
 
     void OnTriggerEnter2D()

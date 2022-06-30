@@ -43,25 +43,28 @@ Player : MonoBehaviour
     {
 		if (Input.GetKeyDown(KeyCode.A))
             setMove(Vector3.left);
-	
+
 		if (Input.GetKeyDown(KeyCode.D))
             setMove(Vector3.right);	
 
 		if (Input.GetKeyDown(KeyCode.W))
             setMove(Vector3.up);
-
+    
 		if (Input.GetKeyDown(KeyCode.S))
             setMove(Vector3.down);
 
         lerpTime += Time.deltaTime / moveTime;
 		
+
+        transform.position = newPos;
         //Debug.Log("--");
         //Debug.Log(oldPos);
         //Debug.Log(newPos);
 
-        if (pushing)
+        if (block != null)
         {
             block.transform.position = Vector3.Lerp(blockOldPos, blockNewPos, lerpTime);
+            Debug.Log(block.transform.position);
         }
 	
 			
@@ -105,13 +108,13 @@ Player : MonoBehaviour
         pushing = false;
 
         //Raycast from where the player is to where the player is trying to move
-        RaycastHit2D playerCast = Physics2D.Raycast(transform.position - (moveDirection/3), moveDirection, 1.4f);
+        RaycastHit2D playerCast = Physics2D.Raycast(transform.position - (moveDirection/3), moveDirection, 1f);
         if (playerCast.collider != null) 
         {
             Collider2D collision = playerCast.collider;
             if (collision.gameObject.tag == "Block")
             {
-                RaycastHit2D blockCast = Physics2D.Raycast(transform.position + moveDirection, moveDirection, 1.4f);
+                RaycastHit2D blockCast = Physics2D.Raycast(transform.position + moveDirection, moveDirection, 1f);
                 if (blockCast.collider == null || blockCast.collider.gameObject.tag == "Button")
                 {
                     

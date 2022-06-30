@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 691334973}
   - component: {fileID: 669488237}
   - component: {fileID: 2826690331515895740}
+  - component: {fileID: 891899183}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -75,13 +76,13 @@ SpriteRenderer:
   m_SortingLayerID: -44025399
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4759345194796491513, guid: 70012ba29ed084f82b81e3d2188ab719,
+  m_Sprite: {fileID: 3080665048519288976, guid: 53f5dd67cba2dce48a5bb79cae3bb2b6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -105,7 +106,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -245,3 +246,22 @@ MonoBehaviour:
   stone_move: {fileID: 8300000, guid: 9040aa97bdbe3eb4481a51f49253ae3a, type: 3}
   timeToMove: 0.2
   pushTime: 0.6
+--- !u!95 &891899183
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183726906943199034}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b523150ffb08ffb4ca3dac9632e0079b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

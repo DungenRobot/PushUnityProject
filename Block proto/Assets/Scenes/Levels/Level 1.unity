@@ -249,16 +249,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3183726906943199034, guid: 58b0aa38b5d20453f8ce748dd2dcdfe2,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3183726906943199037, guid: 58b0aa38b5d20453f8ce748dd2dcdfe2,
-        type: 3}
-      propertyPath: pushTime
-      value: 0.75
-      objectReference: {fileID: 0}
     - target: {fileID: 3183726906943199039, guid: 58b0aa38b5d20453f8ce748dd2dcdfe2,
         type: 3}
       propertyPath: m_RootOrder

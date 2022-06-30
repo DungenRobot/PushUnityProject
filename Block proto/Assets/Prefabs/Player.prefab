@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 691334973}
   - component: {fileID: 669488237}
   - component: {fileID: 2826690331515895740}
-  - component: {fileID: 849732537}
+  - component: {fileID: 891899183}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -106,7 +106,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -244,12 +244,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stone_move: {fileID: 8300000, guid: 9040aa97bdbe3eb4481a51f49253ae3a, type: 3}
-<<<<<<< HEAD
   timeToMove: 0.2
-=======
->>>>>>> e5fb94aba50689d9625821c16b95ed6f71c2949b
   pushTime: 0.3
---- !u!95 &849732537
+--- !u!95 &891899183
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

@@ -520,6 +520,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2826690331515895740, guid: 58b0aa38b5d20453f8ce748dd2dcdfe2,
+        type: 3}
+      propertyPath: pushTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2826690331515895740, guid: 58b0aa38b5d20453f8ce748dd2dcdfe2,
+        type: 3}
+      propertyPath: timeToMove
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3183726906943199034, guid: 58b0aa38b5d20453f8ce748dd2dcdfe2,
         type: 3}
       propertyPath: m_Name

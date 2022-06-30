@@ -742,7 +742,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stone_move: {fileID: 8300000, guid: 9040aa97bdbe3eb4481a51f49253ae3a, type: 3}
-  lerpTime: 0
   timeToMove: 0.2
   pushTime: 0.6
 --- !u!1001 &1381950512
@@ -834,7 +833,7 @@ PrefabInstance:
     - target: {fileID: 2907464069879337852, guid: cb24e4d0219ee4bba97ae76726a730d1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2907464069879337852, guid: cb24e4d0219ee4bba97ae76726a730d1,
         type: 3}
@@ -1363,7 +1362,7 @@ PrefabInstance:
     - target: {fileID: 1105019486517486179, guid: b94acda40b07f43ee8f11e2fe2b79d62,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 1105019486517486179, guid: b94acda40b07f43ee8f11e2fe2b79d62,
         type: 3}

@@ -1,5 +1,6 @@
 # push
 a pushing game
+![gameplay image]("img.png")
 ## mechanics
   * pushing blocks
   * buttons
@@ -9,7 +10,7 @@ a pushing game
   * Fez
   * Portal
   * Half life
- ## scope
+## scope
   * player can push blocks in a top down environment
   * the player pushes these blocks in order to solve puzzles and progress through the game
   * the player is restricted to a grid

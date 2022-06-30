@@ -68,5 +68,9 @@ public class LevelExit : MonoBehaviour
 			yield return null;
 		}
 		sprite.color = targetColor;
+        if (isOpen)
+        {
+            sprite.color = Color.white;
+        }
 	}
 }

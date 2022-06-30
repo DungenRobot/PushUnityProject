@@ -14,8 +14,6 @@ Player : MonoBehaviour
 	[SerializeField]
 	private AudioClip stone_move;
 
-	private LevelExit exit;
-
 	private Vector3 oldDir = Vector3.down;
 	private Vector3 blockNewPos, blockOldPos, newPos, oldPos;
 
@@ -26,8 +24,6 @@ Player : MonoBehaviour
 	public float timeToMove = 0.01f;
 	public float pushTime = 100f;
 
-    private bool pushing = false;
-
     private float moveTime;
 
     void Start()
@@ -35,7 +31,6 @@ Player : MonoBehaviour
 		anim = GetComponent<Animator>();
         newPos = transform.position;
 		_audioSource = GetComponent<AudioSource>();
-		exit = GameObject.Find("Level Exit").GetComponent<LevelExit>();
     }	
 
     // Update is called once per frame
@@ -105,8 +100,6 @@ Player : MonoBehaviour
 
         moveTime = timeToMove;
 
-        pushing = false;
-
         //Raycast from where the player is to where the player is trying to move
         RaycastHit2D playerCast = Physics2D.Raycast(transform.position - (moveDirection/3), moveDirection, 1f);
         if (playerCast.collider != null) 
@@ -117,8 +110,6 @@ Player : MonoBehaviour
                 RaycastHit2D blockCast = Physics2D.Raycast(transform.position + moveDirection, moveDirection, 1f);
                 if (blockCast.collider == null || blockCast.collider.gameObject.tag == "Button")
                 {
-                    
-                    pushing = true;
                     moveTime = pushTime;
 
 					block = collision.gameObject;

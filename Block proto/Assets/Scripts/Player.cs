@@ -71,6 +71,7 @@ Player : MonoBehaviour
 		if (lerpTime >= 1) {
 			isWalking = false;
 		    anim.SetBool("isWalking", false);
+			_audioSource.Stop();
 		}
 
         // if ((transform.position - newPos).magnitude != 0)

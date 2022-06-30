@@ -1,6 +1,6 @@
 # push
 a pushing game
-![gameplay image](img.png)
+![gameplay image](img.PNG)
 ## mechanics
   * pushing blocks
   * buttons

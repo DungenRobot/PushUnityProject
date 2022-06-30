@@ -723,27 +723,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1381491040 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3183726906943199034, guid: 58b0aa38b5d20453f8ce748dd2dcdfe2,
-    type: 3}
-  m_PrefabInstance: {fileID: 891899181}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1381491041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381491040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 138a612f4a3fe4ad4b2f6e5031d172bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stone_move: {fileID: 8300000, guid: 9040aa97bdbe3eb4481a51f49253ae3a, type: 3}
-  timeToMove: 0.2
-  pushTime: 0.6
 --- !u!1001 &1381950512
 PrefabInstance:
   m_ObjectHideFlags: 0

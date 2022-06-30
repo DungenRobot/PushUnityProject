@@ -40,9 +40,13 @@ public class Button : MonoBehaviour
 		}
 	}
 
+
+
 	void OnTriggerExit2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Block")
+		if (col.gameObject.tag == "Block"){
 			active = false;
+			exit.Close();
+		}
 	}
 }

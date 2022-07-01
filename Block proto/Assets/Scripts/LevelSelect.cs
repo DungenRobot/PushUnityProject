@@ -22,13 +22,14 @@ public class LevelSelect : MonoBehaviour
     {
 		audioSource = GetComponent<AudioSource>();
         sprite = GetComponent<SpriteRenderer>();
-		
+
 		levelData = GameObject.Find("Game Data").GetComponent<GlobalData>().latestLevel;
 		if (levelData >= levelID)
 		{
 			Open();
 		}
     }
+
 
     private void Open()
     {

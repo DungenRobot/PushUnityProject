@@ -41,7 +41,7 @@ public class LevelExit : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
     }
 

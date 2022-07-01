@@ -52,14 +52,10 @@ Player : MonoBehaviour
 		
 
         transform.position = newPos;
-        //Debug.Log("--");
-        //Debug.Log(oldPos);
-        //Debug.Log(newPos);
 
         if (block != null)
         {
             block.transform.position = Vector3.Lerp(blockOldPos, blockNewPos, lerpTime);
-            Debug.Log(block.transform.position);
         }
 	
 			

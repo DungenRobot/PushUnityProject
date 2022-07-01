@@ -10,28 +10,27 @@ public class LevelSelect : MonoBehaviour
 	private AudioClip failSound;
 
   	public bool isOpen = false;
-    public string nextLevelName;
+    public int levelID;
     private SpriteRenderer sprite;
     
 	public float errorFlashTime = 0.1f;
 
-    private GameObject levelData;
+    private int levelData;
 
 	// Start is called before the first frame update
     void Start()
     {
-
 		audioSource = GetComponent<AudioSource>();
         sprite = GetComponent<SpriteRenderer>();
+		
+		levelData = GameObject.Find("Game Data").GetComponent<GlobalData>().latestLevel;
+		if (levelData >= levelID)
+		{
+			Open();
+		}
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void Open()
+    private void Open()
     {
         isOpen = true;
         sprite.color = Color.white;
@@ -40,7 +39,7 @@ public class LevelSelect : MonoBehaviour
     void OnTriggerEnter2D()
     {
         if (isOpen) {
-            SceneManager.LoadScene(nextLevelName);
+            SceneManager.LoadScene(levelID);
 		} else {
 			StartCoroutine(cFail());
 		}

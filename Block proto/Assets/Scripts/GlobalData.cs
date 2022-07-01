@@ -6,6 +6,8 @@ public class GlobalData : MonoBehaviour
 {
     public static GlobalData Instance;
 
+    public int latestLevel;
+
     void Awake()
     {
         if (Instance == null){
@@ -16,16 +18,5 @@ public class GlobalData : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -10,16 +10,26 @@ public class LevelExit : MonoBehaviour
 	private AudioClip failSound;
 
   	public bool isOpen = false;
-    public string nextLevelName;
+    public int nextLevelID;
     private SpriteRenderer sprite;
+
+    private GlobalData gameData;
     
 	public float errorFlashTime = 0.1f;
 
 	// Start is called before the first frame update
     void Start()
     {
+
+        gameData = GameObject.Find("Game Data").GetComponent<GlobalData>();
 		audioSource = GetComponent<AudioSource>();
         sprite = GetComponent<SpriteRenderer>();
+
+        if (gameData.latestLevel < (nextLevelID - 1))
+        {
+            gameData.latestLevel = nextLevelID - 1;
+        }
+
     }
 
     // Update is called once per frame
@@ -28,6 +38,10 @@ public class LevelExit : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 
@@ -46,7 +60,7 @@ public class LevelExit : MonoBehaviour
     void OnTriggerEnter2D()
     {
         if (isOpen) {
-            SceneManager.LoadScene(nextLevelName);
+            SceneManager.LoadScene(nextLevelID);
 		} else {
 			StartCoroutine(cFail());
 		}

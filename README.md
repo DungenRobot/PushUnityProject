@@ -1,16 +1,16 @@
-# push
-a pushing game
+# Push
+A top down block pushing game
 ![gameplay image](img.PNG)
-## mechanics
+## Mechanics
   * pushing blocks
   * buttons
   * go to next level
-## inspo
+## Inspirations
   * Zelda
   * Fez
   * Portal
   * Half life
-## scope
+## Scope
   * player can push blocks in a top down environment
   * the player pushes these blocks in order to solve puzzles and progress through the game
   * the player is restricted to a grid
